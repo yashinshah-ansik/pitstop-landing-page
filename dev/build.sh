@@ -16,7 +16,7 @@ $(cat html/head.html)
 $css
 </head>
 <body>
-$(cat html/svg-icon-defs.svg)
+$(cat html/svg-defs.svg)
 $(cat html/body.html)
 <script>$(cat js/outdated-browser.js)</script>
 </body>

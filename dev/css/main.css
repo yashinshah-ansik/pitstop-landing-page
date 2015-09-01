@@ -233,24 +233,33 @@ html, body {
     padding: 2rem;
     background: #353535;
     color: white;
-    text-align: center;
-}
-.footer-with-love {
-    transition: color 1s ease-in-out;
 }
 .footer-heart {
-    padding: 0 0.4rem;
+    padding: 0 0.1rem;
     transition: fill 1s ease-in-out;
-    color: white;
+    fill: white;
 }
-.footer:hover .footer-with-love,
-.footer:active .footer-with-love {
-    color: #5086CC;
+.footer-techstars-logo {
+    display: inline-block;
+    width: 8rem;
+}
+.footer-techstars-logo path {
+    fill: white;
+    transition: fill 1s ease-in-out;
+}
+.footer:hover .tc-fill-blue,
+.footer:active .tc-fill-blue {
+    fill: #708f9d;
+}
+.footer:hover .tc-fill-green,
+.footer:active .tc-fill-green {
+    fill: #33b540;
 }
 .footer:hover .footer-heart,
 .footer:active .footer-heart {
-    color: red;
+    fill: red;
 }
+.footer:hover .
 .footer-social {
     margin-bottom: 2rem;
 }

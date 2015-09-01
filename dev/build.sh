@@ -19,6 +19,7 @@ $css
 $(cat html/svg-defs.svg)
 $(cat html/body.html)
 <script>$(cat js/outdated-browser.js)</script>
+<script>$(cat js/signup-form.js)</script>
 </body>
 </html>
 EOF

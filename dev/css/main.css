@@ -229,6 +229,27 @@ html, body {
     padding: 1rem 2rem;
     border: 1px solid #666;
 }
+
+.signup-signup-btn:disabled,
+.signup-signup-btn:disabled:hover,
+.signup-signup-btn:disabled:active {
+    color: black;
+    background: #F0F0F0;
+}
+}
+.signup-form-info,
+.signup-form-error {
+    float: left;
+    padding: 1rem;
+    opacity: 0;
+    transition: opacity 500ms ease-in-out;
+}
+.signup-form-error {
+    color: #F75B50;
+}
+.signup-form-info {
+    color: #5086CC;
+}
 .footer {
     padding: 2rem;
     background: #353535;

@@ -18,8 +18,11 @@ $css
 <body>
 $(cat html/svg-defs.svg)
 $(cat html/body.html)
-<script>$(cat js/outdated-browser.js)</script>
-<script>$(cat js/signup-form.js)</script>
+<script>
+$(cat js/outdated-browser.js)
+$(cat js/signup-form.js)
+$(cat js/app-screenshot-rotation.js)
+</script>
 </body>
 </html>
 EOF

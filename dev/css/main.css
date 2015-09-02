@@ -86,11 +86,10 @@ html, body {
     padding: 1rem 2rem;
 }
 .features-graphic {
+    max-width: 30rem;
+    margin: 0 auto;
     padding: 0 2rem;
     text-align: center;
-}
-.features-graphic img {
-    max-width: 30rem;
 }
 .features-signup-btn-container {
     text-align: center;
@@ -139,7 +138,7 @@ html, body {
     padding: 3rem;
     padding-top: 1rem;
 }
-.app-item {
+.app-feature {
     min-height: 3rem;
     padding: 0.5rem 1.5rem;
     text-align: center;
@@ -147,8 +146,29 @@ html, body {
     background: #5086CC;
     color: white;
 }
-.app-app {
-    padding: 1rem 4rem;
+.app-screenshots {
+    position: relative;
+    margin: 1rem;
+}
+.app-screenshot:first-child {
+    position: static;
+    opacity: 1.0;
+}
+.app-screenshot:last-child {
+    opacity: 1.0;
+    z-index: 1;
+}
+.app-screenshot {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 1s;
+}
+.app-screenshot img {
+    max-width: 80%;
 }
 .team {
     padding: 1rem;
@@ -322,12 +342,12 @@ html, body {
         text-align: left;
         font-size: 2.8rem;
     }
-    .app-item {
+    .app-feature {
         margin-top: 2rem;
         margin-bottom: 2rem;
     }
-    .app-app {
-        padding: 0 1rem;
+    .app-screenshots {
+        margin: 0;
     }
     .team-member img {
         max-width: 60%;
@@ -351,12 +371,9 @@ html, body {
     .market-item img {
         width: 60%;
     }
-    .app-item {
+    .app-feature {
         margin-top: 4rem;
         margin-bottom: 2rem;
-    }
-    .app-app {
-        padding: 0 4rem;
     }
     .contact-separator {
         display: none;

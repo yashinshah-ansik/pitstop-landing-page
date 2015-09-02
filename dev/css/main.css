@@ -89,6 +89,9 @@ html, body {
     padding: 0 2rem;
     text-align: center;
 }
+.features-graphic img {
+    max-width: 30rem;
+}
 .features-signup-btn-container {
     text-align: center;
 }
@@ -145,7 +148,7 @@ html, body {
     color: white;
 }
 .app-app {
-    padding: 1rem 3rem;
+    padding: 1rem 4rem;
 }
 .team {
     padding: 1rem;
@@ -280,7 +283,6 @@ html, body {
 .footer:active .footer-heart {
     fill: red;
 }
-.footer:hover .
 .footer-social {
     margin-bottom: 2rem;
 }
@@ -330,13 +332,6 @@ html, body {
     .team-member img {
         max-width: 60%;
     }
-    .footer-with-love {
-        float: left;
-    }
-    .footer-social {
-        float: right;
-        margin: 0;
-    }
 }
 
 @media (min-width: 52em) {
@@ -365,5 +360,12 @@ html, body {
     }
     .contact-separator {
         display: none;
+    }
+    .footer-with-love {
+        float: left;
+    }
+    .footer-social {
+        float: right;
+        margin: 0;
     }
 }

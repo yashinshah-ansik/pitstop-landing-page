@@ -27,6 +27,24 @@
         msgs.innerHTML = 'Saving&hellip;';
         msgs.style.opacity = '1.0';
 
+        var onsuccess = function() {
+            msgs.style.opacity = '0.0';
+            window.setTimeout(function() {
+                msgs.innerHTML = 'Thank you for registering.';
+                msgs.style.opacity = '1.0';
+            }, 500);
+            firstname.disabled = true;
+            lastname.disabled = true;
+            email.disabled = true;
+            document.querySelector('.signup-signup-btn').disabled = true;
+        };
+
+        // Demo.
+        if (location.host.slice(0, 5) == 'demo.') {
+            onsuccess();
+            return false;
+        }
+
         var xhr = new XMLHttpRequest();
         var data = {
             "firstname": firstname.value.trim(),
@@ -49,15 +67,7 @@
                 msgs.innerHTML = 'Sorry, saving failed: request error ' + xhr.status + ' ' + xhr.statusText + ' ' + xhr.responseText;
                 return;
             }
-            msgs.style.opacity = '0.0';
-            window.setTimeout(function() {
-                msgs.innerHTML = 'Thank you for registering.';
-                msgs.style.opacity = '1.0';
-            }, 500);
-            firstname.disabled = true;
-            lastname.disabled = true;
-            email.disabled = true;
-            document.querySelector('.signup-signup-btn').disabled = true;
+            onsuccess();
         };
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.send(JSON.stringify(data));
